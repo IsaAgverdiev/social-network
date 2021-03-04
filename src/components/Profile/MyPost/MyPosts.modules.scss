@@ -1,0 +1,26 @@
+.MyPosts {
+
+	.title {
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
+	.textArea {
+		border-radius: 7px;
+		padding: 10px 15px;
+		width: 100%;
+	}
+	.btnSend {
+		display: block;
+		margin: 10px 0px 30px auto;
+		background-color: white;
+		border: none;
+		padding: 10px 20px;
+		&:hover {
+			background-color: #258286;
+			color: white;
+		}
+		&:active {
+			background-color: darken(#258286, 5%);
+		}
+	}
+}

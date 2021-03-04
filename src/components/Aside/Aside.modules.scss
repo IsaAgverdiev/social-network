@@ -1,20 +1,19 @@
 .aside {
-	&__wrap {
 		grid-area: aside;
-		background-color: $primary-300;
+		background-color: #a6e3e9; /*$primary-300; */
 		box-shadow: 3px 3px 15px 0px rgba(50, 50, 50, 0.1);
-		// border: 1px solid lightgray;
 		border-radius: 10px;
 		padding: 30px;
-	}
 
-	&-list {
+	.list {
 		display: flex;
 		flex-direction: column;
 	}
-	&-item {
+	.item {
 		& + & {
 			margin-top: 10px;
 		}
 	}
+	.link{}
 }
+
