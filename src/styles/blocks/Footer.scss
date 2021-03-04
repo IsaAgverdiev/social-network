@@ -1,0 +1,8 @@
+.footer {
+	&__wrap {
+		grid-area: footer;
+		grid-template-columns: 0.5fr 200px minmax(500px, 1000px) 0.5fr;
+		gap: 20px;
+		background-color: $primary-400;
+	}
+}

@@ -1,0 +1,12 @@
+.profile {
+	&__wrap {
+		grid-area: profile;
+		border-radius: 10px;
+		background: $primary-200;
+	}
+
+	&__img {
+		object-fit: cover;
+		width: 500px;
+	}
+}
