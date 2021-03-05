@@ -1,4 +1,4 @@
-import s from "./MyPosts.modules.scss"
+import s from "./MyPosts.module.scss"
 import Post from "./Post/Post"
 
 const MyPosts = () => {
@@ -12,7 +12,7 @@ const MyPosts = () => {
 				</label>
 			</div>
 			<div className={s.posts}>
-				<Post message="Hi, how are you?" counterLike="15" />
+				<Post message="Hi, how are you???" counterLike="15" />
 				<Post message="It's my first post!" counterLike="5" />
 		
 			</div>
