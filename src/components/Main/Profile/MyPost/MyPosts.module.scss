@@ -1,20 +1,27 @@
 .MyPosts {
+	margin-top: 50px;
 
 	.title {
-		margin-top: 30px;
+		font-size: 24px;
+		font-weight: 500;
 		margin-bottom: 10px;
 	}
+	
 	.textArea {
 		border-radius: 7px;
 		padding: 10px 15px;
-		width: 100%;
+		min-width: 100%;
+		min-height: 125px;
+		resize: none;
+		overflow-y: none;
 	}
 	.btnSend {
 		display: block;
 		margin: 10px 0px 30px auto;
+		padding: 10px 20px;
 		background-color: white;
 		border: none;
-		padding: 10px 20px;
+		border-radius: 7px;
 		&:hover {
 			background-color: #258286;
 			color: white;

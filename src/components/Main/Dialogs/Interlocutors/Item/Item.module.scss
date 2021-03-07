@@ -1,0 +1,11 @@
+.item {
+  display: block;
+  
+  & + .item {
+    margin-top: 10px;
+  }
+  &.active {
+    font-weight: 700;
+  }
+}
+

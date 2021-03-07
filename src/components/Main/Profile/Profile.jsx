@@ -1,15 +1,12 @@
 import MyPosts from "./MyPost/MyPosts"
+import User from "./User/User";
 import s from "./Profile.module.scss"
 
-const Profile = () => {
+const Profile = (props) => {
 	return (
 		<div className={s.profile}>
-			<div className={s.persona}>
-				<h1>Persona</h1>
-				<div className={s.content}>
-				</div>
-			</div>
-			<MyPosts />
+			<User />
+			<MyPosts postData={props.postData}/>
 		</div>
 	);
 }

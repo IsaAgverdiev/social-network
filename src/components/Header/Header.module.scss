@@ -1,14 +1,14 @@
 .header {
-  
-    width: 100%;
-    background-color:#258286; /*$primary-400; */
-    grid-area: header;
-    display: grid;
-    grid-template-columns: .5fr 200px minmax(500px, 1000px) .5fr;
-    gap: 20px;
-    align-items: center;
-  
-    .inner {
+  width: 100%;
+  background-color: #258286; /*$primary-400; */
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 0.5fr 200px minmax(500px, 1000px) 0.5fr;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 3px 3px 15px 0 rgba(50, 50, 50, 0.2);
+
+  .inner {
     align-items: center;
     grid-column: 2 / 3;
   }
@@ -18,7 +18,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    
+
     text-align: center;
     font-size: 16px;
     line-height: 50px;

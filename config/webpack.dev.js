@@ -7,10 +7,11 @@ const common = require("./webpack.common");
 const devConfig = {
   mode: "development",
   devServer: {
-    port: 3000,
+    port: 8081,
     contentBase: "../dist",
     open: "chrome",
     hot: true,
+    historyApiFallback: true,
   },
   target: "web",
   plugins: [new HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()],

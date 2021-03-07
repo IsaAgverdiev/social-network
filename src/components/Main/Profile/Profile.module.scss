@@ -1,6 +1,4 @@
 .profile {
-	grid-area: content;
-	border-radius: 10px;
-	background: #cbf1f5; /* $primary-200; */
-	padding: 30px;
+	display: grid;
+	grid-template-rows: repeat(2, auto);
 }

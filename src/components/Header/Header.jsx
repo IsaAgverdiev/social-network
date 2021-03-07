@@ -1,14 +1,15 @@
-import s from "./Header.modules.scss"
+import s from "./Header.module.scss"
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
 	return (
 		<header className={s.header}>
 			<div className={s.inner}>
-				<a href="#" className={s.link}>
+				<NavLink to="/profile" className={s.link}>
 					<div className={s.logo}>
 						Logo
 					</div>
-				</a>
+				</NavLink>
 			</div>
 		</header>
 	);

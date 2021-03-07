@@ -1,0 +1,8 @@
+.message {
+  grid-column: 2/3;
+  background: darken(#cbf1f5, 5%); /* $primary-200; */
+  background: whitesmoke; /* $primary-200; */
+  width: 100%;
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+}

@@ -7,10 +7,11 @@
 body {
 	font-family: "Roboto", sans-serif;
 	font-size: 18px;
+	color: #333333;
 	background-color:$primary-100;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,p {
 	margin: 0;
 	padding: 0;
 }
@@ -32,13 +33,20 @@ a {
 	text-decoration: none;
 }
 
+	.title {
+		font-size: 24px;
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+
 .grid__wrapper {
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: 80px minmax(400px, 1fr) 80px;
+	grid-template-rows: 80px minmax(400px, 1fr);
 	grid-template-columns: .5fr 200px minmax(500px, 1000px) .5fr;
 	grid-gap: 20px;
-	grid-template-areas: " header header header header" ". aside profile ." "footer footer footer footer";
+	grid-template-areas: " header header header header" ". aside main .";
+	margin-bottom: 30px;
 }
 
 
