@@ -1,23 +1,23 @@
 .user {
-	display: grid;
-	grid-template-columns: 1fr 5fr;
-	grid-template-rows: 1fr;
-	align-items: strart;
+	display: flex;
 
-	&Ava {
-		display: inline-block;
+	&ImgWrap {
 		width: 75px;
 		height: 75px;
 		background-color: tomato;
 		border-radius: 50%;
-		grid-column: 1/2;
+		overflow: hidden;
+		margin-right: 15px;
 	}
-
+	.img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 	&Info {
-		grid-column: 2/3;
-	}
-	&Status {
-		margin-top: 5px;
-		font-size: 16px;
+		.userStatus {
+			margin-top: 5px;
+			font-size: 16px;
+		}
 	}
 }

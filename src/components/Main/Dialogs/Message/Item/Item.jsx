@@ -1,3 +1,4 @@
+import React from 'react'
 import s from './Item.module.scss'
 
 

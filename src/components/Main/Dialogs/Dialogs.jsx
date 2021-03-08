@@ -7,7 +7,9 @@ const Dialogs = (props) => {
         <div className={s.dialogs}>
             <div className={s.item}>
                 <Interlocutors dialogsData={props.dialogsData}/>
-                <Message messagesData={props.messagesData}/>
+                <Message messagesData={props.messagesData}
+                    addMessage={props.addMessage}
+                />
             </div>
         </div>
     )

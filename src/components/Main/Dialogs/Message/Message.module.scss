@@ -1,8 +1,49 @@
 .message {
   grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   background: darken(#cbf1f5, 5%); /* $primary-200; */
   background: whitesmoke; /* $primary-200; */
   width: 100%;
   padding: 20px;
   border-radius: 0 10px 10px 0;
+  
+  .items {
+    flex-shrink: 0;
+  }
+
+  .messageFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+
+    .textArea {
+      border-radius: 7px;
+      padding: 10px 15px;
+      width: 100%;
+      resize: none;
+      overflow-y: none;
+    }
+
+    .btnSend {
+      margin-left: 15px;
+      padding: 10px 20px;
+      background-color: lighten(#258286, 10%);
+      color: white;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #258286;
+        color: white;
+      }
+      &:active {
+        background-color: darken(#258286, 5%);
+      }
+    }
+  }
 }

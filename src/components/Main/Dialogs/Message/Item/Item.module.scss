@@ -1,6 +1,15 @@
 .item {
-  
+  padding: 10px 20px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: lightblue;
+
   & + .item {
     margin-top: 10px;
+  }
+
+  &:nth-child(even) {
+    background-color: lightgreen;
+    margin-left: auto;
   }
 }
