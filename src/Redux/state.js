@@ -1,4 +1,7 @@
-import { rerenderEntireTree } from '../render';
+let rerenderEntireTree = () => {
+	console.log ('State changed')
+}
+
 
 let state = {
 	profilePage: {
@@ -6,6 +9,7 @@ let state = {
 			{ id: 1, message: "Hi, how are you???", counterLike: '14', userName: 'Isak Avetor' },
 			{ id: 2, message: 'It\'s my first post!', counterLike: '3', userName: 'Isak Avetor' },
 		],
+		newPostText: ''
 	},
 	dialogsPage: {
 		dialogsData: [
@@ -24,30 +28,45 @@ let state = {
 			{ id: 5, message: 'What are you up to?' },
 			{ id: 6, message: 'I see infidelity as a total betrayal.' },
 		],
+		newMessageText: ''
 	},
 }
 
-export let addPost = (postMessage) => {
-
+export const addPost = () => {
 	let newPost = {
 		id: 3,
-		message: postMessage,
+		message: state.profilePage.newPostText,
 		counterLike: 0,
 		userName: 'Isak Avetor'
 	}
 	state.profilePage.postData.push(newPost);
+	state.profilePage.newPostText = ''
+	rerenderEntireTree(state);
+}
+
+export const updateNewPostText = (newText) => {
+	state.profilePage.newPostText = newText
 	rerenderEntireTree(state);
 }
 
 
-export let addMessage = (chatMessage) => {
-
+export const addMessage = () => {
 	let newMessage = {
-		id: 7, 
-		message: chatMessage,
+		id: 7,
+		message: state.dialogsPage.newMessageText,
 	}
 	state.dialogsPage.messagesData.push(newMessage)
+	state.dialogsPage.newMessageText = ''
 	rerenderEntireTree(state);
+}
+
+export const updateNewMessageText = (NewText) => {
+	state.dialogsPage.newMessageText = NewText;
+	rerenderEntireTree(state);
+}
+
+export const subscribe = (observer) => {
+	rerenderEntireTree = observer;
 }
 
 export default state

@@ -7,13 +7,18 @@ import Main from "./components/Main/Main";
 import { BrowserRouter, Route, NavLink } from "react-router-dom";
 
 function App(props) {
- 
+
   return (
     <BrowserRouter>
       <div className="app-wrapper grid__wrapper">
         <Header />
         <Aside />
-        <Main state={props.state} addPost={props.addPost} addMessage={props.addMessage}/>
+        <Main state={props.state}
+          addPost={props.addPost}
+          addMessage={props.addMessage}
+          updateNewPostText={props.updateNewPostText}
+          updateNewMessageText={props.updateNewMessageText}
+        />
         {/* <Footer /> */}
       </div>
     </BrowserRouter>
