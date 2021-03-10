@@ -8,7 +8,7 @@
   width: 100%;
   padding: 20px;
   border-radius: 0 10px 10px 0;
-  
+
   .items {
     flex-shrink: 0;
   }
@@ -25,6 +25,7 @@
       width: 100%;
       resize: none;
       overflow-y: none;
+      border: 1px solid #999;
     }
 
     .btnSend {

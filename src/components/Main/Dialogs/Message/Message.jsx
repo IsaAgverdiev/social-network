@@ -1,7 +1,7 @@
 import React from 'react'
+import { addMessageActionCreator, updateNewMessageActionCreator } from '../../../../Redux/dialogs-reducer';
 import Item from './Item/Item'
 import s from './Message.module.scss'
-
 
 const Message = (props) => {
 	let messagesElement = props.messagesData.map(message => <Item message={message.message} />);
@@ -9,12 +9,12 @@ const Message = (props) => {
 	let createMessageElement = React.createRef();
 
 	let addMessage = () => {
-		props.addMessage()
+		props.dispatch(addMessageActionCreator())
 	}
 
-	let onMessageChange = () => {
-		let text = createMessageElement.current.value;
-		props.updateNewMessageText(text)
+	let onMessageChange = (e) => {
+		let text = e.target.value;
+		props.dispatch(updateNewMessageActionCreator(text))
 	}
 
 	return (
@@ -23,7 +23,11 @@ const Message = (props) => {
 				{messagesElement}
 			</div>
 			<label className={s.messageFooter}>
-				<textarea ref={createMessageElement} onChange={onMessageChange} value={props.newMessageText} rows="1" className={s.textArea} placeholder="Write a message..." />
+				<textarea onChange={onMessageChange}
+					className={s.textArea}
+					value={props.newMessageText} rows="1"
+					placeholder="Write a message..."
+				/>
 				<button onClick={addMessage} className={s.btnSend}>Send</button>
 			</label>
 		</article>
